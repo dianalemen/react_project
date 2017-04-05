@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import List from './List';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+    constructor(props){
+        super(props);
+        this.state = {};
+    }
+
+    componentDidMount(){
+        fetch('https://api.github.com/users?since=135>')
+        .then( (response) => response.json())
+        .then(res => {this.setState({
+                users: res
+            })
+        })
+    }
+
+    render() {
+        if(!this.state.users) return <p>Loading...</p>;
+        return ( 
+            <ul>
+                <List items={this.state.users} />
+            </ul>
+         );
+    }
 }
 
 export default App;
