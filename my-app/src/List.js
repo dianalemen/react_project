@@ -11,13 +11,17 @@ class List extends Component {
                 {users.slice(0, size).map(user =>
                     <li key={user.id}>
                         <img src={user.avatar_url} alt={user.id} height="50" width="50"/>
-                        <span>{user.login}</span>
-                         <button>x</button>
+                            <span>{user.login}</span>
+                        <button onClick={this.deleteUser.bind(this)}>x</button>
                 </li>)}
             </ul>
                 )
+    
          }
-        
+
+        deleteUser(){
+            this.props.remove(this.props.userId);
+         }
     }
 
 
