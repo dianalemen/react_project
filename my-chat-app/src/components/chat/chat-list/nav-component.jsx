@@ -1,7 +1,8 @@
 import React from 'react';
+import {Component} from 'react';
 
 
-class NavListComponent extends React.Component {
+class NavListComponent extends Component {
   render() {
     return (
     <div className="chat-left-side">

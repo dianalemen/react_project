@@ -1,9 +1,11 @@
 require('./nav.css');
 import React from 'react';
+import {Component} from 'react';
+import NavListComponent from '../chat/chat-list/nav-component.jsx';
 
 
 
-class AppComponent extends React.Component {
+class AppComponent extends Component {
   render() {
     return (
       <div >
@@ -14,7 +16,7 @@ class AppComponent extends React.Component {
            <a href="#">Login</a>
            <a href="#">Regeister</a>
          </nav>
- 
+<NavListComponent />
       </div>
     );
   }
