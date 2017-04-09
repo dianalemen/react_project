@@ -2,6 +2,7 @@ require('./nav.css');
 import React from 'react';
 
 
+
 class AppComponent extends React.Component {
   render() {
     return (
@@ -13,6 +14,7 @@ class AppComponent extends React.Component {
            <a href="#">Login</a>
            <a href="#">Regeister</a>
          </nav>
+ 
       </div>
     );
   }
@@ -20,5 +22,6 @@ class AppComponent extends React.Component {
 
 AppComponent.defaultProps = {
 };
+
 
 export default AppComponent;
