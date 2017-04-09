@@ -1,7 +1,7 @@
 require('./nav.css');
 import React from 'react';
 import {Component} from 'react';
-import NavListComponent from '../chat/chat-list/nav-component.jsx';
+import LoginComponent from '../auth/login.component.jsx';
 
 
 
@@ -16,7 +16,7 @@ class AppComponent extends Component {
            <a href="#">Login</a>
            <a href="#">Regeister</a>
          </nav>
-<NavListComponent />
+         <LoginComponent />
       </div>
     );
   }
