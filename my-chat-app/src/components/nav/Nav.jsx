@@ -1,7 +1,8 @@
 require('./nav.css');
 import React from 'react';
 import {Component} from 'react';
-import HomeComponent from '../chat/chat-list/chat-main/message/messages-new.component.jsx';
+//import HomeComponent from '../chat/chat-list/chat-main/message/messages-new.component.jsx'; --for audit
+import HomeComponent from '../home/home.component.jsx';
 
 
 
