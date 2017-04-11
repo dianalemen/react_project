@@ -2,10 +2,12 @@ import React from 'react';
 import {Component} from 'react';
 
 
+
 class LoginComponent extends Component {
   render() {
     return (
    <section>
+    
     <form className="content">
         <div>
             <input type="email" placeholder="Your email" name="email" />

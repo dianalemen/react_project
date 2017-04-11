@@ -1,7 +1,23 @@
 import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/nav/Nav.jsx';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-// Render the main component into the dom
-ReactDOM.render( < App / > , document.getElementById('app'));
+import AppComponent from './components/nav/Nav.jsx';
+import Home from './components/home/home.component';
+import Register from './components/auth/register.component';
+import Login from './components/auth/login.component';
+
+
+ReactDOM.render((
+     <BrowserRouter>
+     <div>
+            <Route path="/" component={AppComponent}/>
+            <Route path="/home" component={Home}/>
+            <Route path="/register" component={Register}/>
+            <Route path="/login" component={Login}/>
+          </div>
+     </BrowserRouter>
+     ),
+     document.getElementById('app')
+);
