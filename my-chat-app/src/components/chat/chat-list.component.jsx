@@ -12,7 +12,7 @@ class ChatListComponent extends Component {
 
     componentDidMount(){
         this.setState({
-                users: [{login: 'user1'},{login: 'user2'},{login: 'user3'}]
+                users: [{id: 4, login: 'user1'},{id: 5, login: 'user2'},{id: 6, login: 'user3'}]
             })
         }
 
