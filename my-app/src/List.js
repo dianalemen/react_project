@@ -3,6 +3,7 @@ import { Component } from 'react';
 
 
 class List extends Component {
+    
     render() {
         const users = this.props.items;
         let size = 3;
@@ -20,7 +21,7 @@ class List extends Component {
          }
 
         deleteUser(){
-            this.props.remove(this.props.userId);
+            
          }
     }
 
