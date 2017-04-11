@@ -13,9 +13,11 @@ class MenuComponent extends Component {
     return (
       <div >
          <nav className="navigation">
+             <Link to="/">Logo</Link>
            <Link to="/home">Home</Link>
            <Link to="/register">Regeister</Link>
            <Link to="/login">Login</Link>
+           <Link to="/chat">Chat</Link>
          </nav>
          
       </div>
