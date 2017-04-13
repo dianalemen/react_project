@@ -12,7 +12,7 @@ import Chat from './components/chat/chat.component';
 
 ReactDOM.render((
      <BrowserRouter>
-     <div>
+          <div>
             <Route path="/" component={AppComponent}/>
             <Route path="/home" component={Home}/>
             <Route path="/register" component={Register}/>

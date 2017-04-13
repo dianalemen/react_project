@@ -1,46 +1,46 @@
 import React from 'react';
 import {Component} from 'react';
 
-
+import '../../styles/style_auth.css';
 
 
 class RegisterComponent extends Component {
   render() {
     return (
-        <div>
+        <section>
     <form className="content">
         <div>
             
-            <input type="text" placeholder="Введіть Ваше ім'я"/>
+            <input type="text" placeholder="Введіть Ваше ім'я" className="content-input"/>
             <div className="error">
-                Name is required
+                
             </div>
         </div>
         <div>
             
-            <input type="email" placeholder="Введіть email"/>
+            <input type="email" placeholder="Введіть email" className="content-input"/>
             <div className="error">
-                Email is required
+                
             </div>
         </div>
         
             <div>
                 
-                <input type="password" placeholder="Придумайте пароль"/>
+                <input type="password" placeholder="Придумайте пароль" className="content-input"/>
                 <div className="error">
-                    Password is required
+                    
                 </div>
             </div>
             <div>
             
-                <input type="password" placeholder="Підтвердіть пароль"/>
+                <input type="password" placeholder="Підтвердіть пароль" className="content-input"/>
                 <div className="error">
-                    Confirm Password is required
+                    
             </div>
         </div>
-        <button type="submit">Зареєструватися</button>
+        <button type="submit" className="register-button content-button">Зареєструватися</button>
     </form>
-    </div>
+    </section>
     );
   }
 }
