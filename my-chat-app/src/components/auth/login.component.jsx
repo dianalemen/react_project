@@ -20,7 +20,7 @@ class LoginComponent extends Component {
              fetch('http://eleksfrontendcamp-mockapitron.rhcloud.com/login', myInit)
             .then((res) => res.json())
             .then((resObj) => localStorage.setItem('token', resObj.token))
-            .then(console.log)
+            .then()
         }
 
   render() {
@@ -28,16 +28,16 @@ class LoginComponent extends Component {
    <section>
     <div className="content">
         <div >
-            <input type="email" placeholder="Your email" name="email" className="content-input"/>
+            <input type="email" placeholder="Ваш email" name="email" className="content-input"/>
         </div>
         <div >
-            <input type="password" placeholder="Your password" name="password" className="content-input"/>
+            <input type="password" placeholder="Ваш пароль" name="password" className="content-input"/>
         </div>
         <div>
-            <button className="content-button">Login</button>
+            <button className="content-button">Увійти</button>
         </div>
         <div className="social">
-            <p>Login with social media</p>
+            <p>Залогуватися через соціальні мережі</p>
             <button id="google-login-btn" className="content-button" onClick={this.signIn.bind(this)}>
                 Login with Google+
             </button>

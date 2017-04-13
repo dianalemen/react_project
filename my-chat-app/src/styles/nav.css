@@ -1,0 +1,11 @@
+.nav-class {
+    background-color: #ac45fd;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+}

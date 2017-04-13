@@ -4,6 +4,7 @@ import {Component} from 'react';
 
 
 import MenuComponent from '../menu.jsx';
+import '../../styles/nav.css';
 
 
 //import HomeComponent from '../chat/chat-list/chat-main/message/messages-new.component.jsx'; --for audit
@@ -13,7 +14,7 @@ import MenuComponent from '../menu.jsx';
 class AppComponent extends Component {
   render() {
     return (
-      <div >
+      <div className="nav-class">
         <MenuComponent />
       </div>
     );

@@ -29,7 +29,7 @@
      border-radius: 6px;
      font-size: 16px;
      height: 30px;
-     margin-left: 45%;
+     margin-left: 44%;
      outline: none;
      padding: 5px;
  }
@@ -46,4 +46,8 @@
  
  .register-button {
      margin-left: 34%;
+ }
+ 
+ .home-component {
+     text-align: center;
  }

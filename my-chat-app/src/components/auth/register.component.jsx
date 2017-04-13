@@ -26,7 +26,7 @@ class RegisterComponent extends Component {
         
             <div>
                 
-                <input type="password" placeholder="Придумайте пароль" className="content-input"/>
+                <input type="password" placeholder="Пароль" className="content-input"/>
                 <div className="error">
                     
                 </div>
