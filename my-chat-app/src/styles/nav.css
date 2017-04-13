@@ -13,3 +13,8 @@ nav a {
 #logo {
     flex-grow: 2;
 }
+
+h1 {
+    margin: 0;
+    margin-left: 10px;
+}

@@ -1,0 +1,8 @@
+.chat-right-side {
+    float: left;
+    height: 650px;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 62%;
+}

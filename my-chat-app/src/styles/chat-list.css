@@ -7,6 +7,7 @@ body {
     width: 38%;
     float: left;
     background-color: #ac45fd;
+    border-top: 1px solid white;
     overflow-x: hidden;
     overflow-y: scroll;
 }

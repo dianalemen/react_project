@@ -11,7 +11,7 @@ class MenuComponent extends Component {
   render() {
     return (
          <nav className="navigation">
-           <Link to="/home" id="logo">Logo</Link>
+           <Link to="/home" id="logo"><h1>MyChatApp</h1></Link>
            <Link to="/home">Home</Link>
            <Link to="/register">Regeister</Link>
            <Link to="/login">Login</Link>
