@@ -1,53 +1,53 @@
- section {
-     margin: auto;
-     margin-top: 100px;
-     width: 35%;
- }
- 
- .content {
-     border: 1px solid #ac45fd;
-     border-radius: 5px;
-     box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.6);
-     bottom: 0;
-     left: 0;
-     padding: 20px;
-     right: 0;
- }
- 
- .content-input {
-     border-radius: 5px;
-     font-size: 16px;
-     height: 25px;
-     margin-bottom: 20px;
-     margin-top: 20px;
-     padding-left: 5px;
-     width: 98%;
- }
- 
- .content-button {
-     border: none;
-     border-radius: 6px;
-     font-size: 16px;
-     height: 30px;
-     margin-left: 44%;
-     outline: none;
-     padding: 5px;
- }
- 
- #google-login-btn {
-     background-color: rgb(239, 92, 92);
-     color: white;
-     margin-left: 34%;
- }
- 
- p {
-     text-align: center;
- }
- 
- .register-button {
-     margin-left: 34%;
- }
- 
- .home-component {
-     text-align: center;
- }
+  section {
+      margin: auto;
+      margin-top: 100px;
+      width: 35%;
+  }
+  
+  .content {
+      border: 1px solid #ac45fd;
+      border-radius: 5px;
+      box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      right: 0;
+  }
+  
+  .content-input {
+      border-radius: 5px;
+      font-size: 16px;
+      height: 25px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding-left: 5px;
+      width: 98%;
+  }
+  
+  .content-button {
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      height: 30px;
+      margin-left: 44%;
+      outline: none;
+      padding: 5px;
+  }
+  
+  #google-login-btn {
+      background-color: rgb(239, 92, 92);
+      color: white;
+      margin-left: 34%;
+  }
+  
+  p {
+      text-align: center;
+  }
+  
+  .register-button {
+      margin-left: 34%;
+  }
+  
+  .home-component {
+      text-align: center;
+  }

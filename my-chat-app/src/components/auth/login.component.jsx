@@ -25,6 +25,7 @@ class LoginComponent extends Component {
 
   render() {
     return (
+        <div className="background">
    <section>
     <div className="content">
         <div >
@@ -46,6 +47,7 @@ class LoginComponent extends Component {
 
     <div> <br /></div>
 </section>
+</div>
     );
   }
 }

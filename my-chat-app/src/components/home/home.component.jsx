@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 
-import '../../styles/style_auth.css';
+require('../../styles/style_auth.css');
 class HomeComponent extends Component {
   render() {
     return (

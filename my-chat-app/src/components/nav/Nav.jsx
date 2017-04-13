@@ -4,7 +4,7 @@ import {Component} from 'react';
 
 
 import MenuComponent from '../menu.jsx';
-import '../../styles/nav.css';
+require('../../styles/nav.css');
 
 
 //import HomeComponent from '../chat/chat-list/chat-main/message/messages-new.component.jsx'; --for audit
