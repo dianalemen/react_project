@@ -14,7 +14,13 @@ class MessageListComponent extends Component {
 
     componentDidMount(){
         this.setState({
-                messages: [{id: 4, text: 'hello1'},{id: 5, text: 'hello2'},{id: 6, text: 'hello3'}]
+                messages: [{id: 4, text: 'hello1 chatId1', chatId: 1},
+                           {id: 5, text: 'hello2 chatId1', chatId: 1},
+                           {id: 6, text: 'hello3 chatId1', chatId: 1},
+                           {id: 7, text: 'hello3 chatId2', chatId: 2},
+                           {id: 8, text: 'hello3 chatId2', chatId: 2},
+                           {id: 9, text: 'hello3 chatId2', chatId: 2}
+                           ]
             })
         }
 

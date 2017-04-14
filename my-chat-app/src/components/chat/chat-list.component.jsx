@@ -13,7 +13,9 @@ class ChatListComponent extends Component {
 
     componentDidMount(){
         this.setState({
-                users: [{id: 4, login: 'user1'},{id: 5, login: 'user2'},{id: 6, login: 'user3'}]
+                users: [{id: 1, login: 'user1'},
+                        {id: 2, login: 'user2'}
+                        ]
             })
         }
 
@@ -47,7 +49,9 @@ class ChatListComponent extends Component {
     </div>
     );
   }
+
 }
+
 
 ChatListComponent.defaultProps = {
 };

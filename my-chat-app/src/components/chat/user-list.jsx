@@ -10,7 +10,7 @@ class List extends Component {
         return (
             <ul>
                 {users.map(user =>
-                    <li key={user.id} className="user-content">
+                    <li key={user.id} className="user-content" onClick={this.handleClick.bind(this)}>
                         <div className=" user-content__image ">
                     </div>
                     <div className="user-content__status ">
@@ -26,10 +26,11 @@ class List extends Component {
     
          }
 
-        deleteUser(){
-            
-         }
+    handleClick(e) {
+       e.preventDefault();
+       console.log(this.users.id);    
     }
+}
 
 
 export default List;
