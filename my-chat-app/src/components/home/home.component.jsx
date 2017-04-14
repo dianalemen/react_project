@@ -1,8 +1,9 @@
+require('../../styles/style_auth.css');
 import React from 'react';
 import {Component} from 'react';
 
 
-require('../../styles/style_auth.css');
+
 class HomeComponent extends Component {
   render() {
     return (

@@ -43,7 +43,7 @@ body {
     border-bottom: 1px solid #eef4f5;
     border-left: 1px solid #eef4f5;
     height: 20px;
-    left: 9px;
+    left: 26px;
     position: absolute;
     top: 5px;
     transform: rotate(45deg);
@@ -79,7 +79,6 @@ body {
     border-radius: 30px;
     height: 3px;
     margin-bottom: 5px;
-    margin-left: 15px;
     width: 30px;
 }
 

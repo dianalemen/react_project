@@ -1,7 +1,8 @@
+require('../../styles/style_auth.css');
 import React from 'react';
 import {Component} from 'react';
 
-require('../../styles/style_auth.css');
+
 
 class LoginComponent extends Component {
         constructor(props){
@@ -25,8 +26,7 @@ class LoginComponent extends Component {
 
   render() {
     return (
-        <div className="background">
-   <section>
+   <section className="auth-section">
     <div className="content">
         <div >
             <input type="email" placeholder="Ваш email" name="email" className="content-input"/>
@@ -47,7 +47,6 @@ class LoginComponent extends Component {
 
     <div> <br /></div>
 </section>
-</div>
     );
   }
 }

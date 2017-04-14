@@ -32,9 +32,9 @@ class MessageListComponent extends Component {
             <button><span className="icon-user "></span></button>
         </li>
 </ul>
-            <ul className="chat-content">
+            
                 <MessageList items={this.state.messages}/>
-            </ul>
+         
     <MessageNew />
 </section>
     );

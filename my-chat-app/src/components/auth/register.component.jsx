@@ -1,13 +1,14 @@
+require('../../styles/style_auth.css');
 import React from 'react';
 import {Component} from 'react';
 
-require('../../styles/style_auth.css');
+
 
 
 class RegisterComponent extends Component {
   render() {
     return (
-        <section>
+        <section className="auth-section">
     <form className="content">
         <div>
             
