@@ -8,7 +8,7 @@ class MessagesList extends Component {
     render() {
         const messages = this.props.items;
         return (
-            <ul className="chat-content">
+            <ul className="chat-content list">
                 {messages.map(message =>
                     <li key={message.id} className="chat-content__massege ">
                         <div className="user-content__image "></div>

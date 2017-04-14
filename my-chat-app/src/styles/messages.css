@@ -2,12 +2,22 @@ section {
     margin: 0;
 }
 
+ul {
+    padding-left: 0;
+}
+
 .chat-right-side {
-    float: left;
+    display: flex;
+    flex-direction: column;
     height: 650px;
     overflow-x: hidden;
     overflow-y: scroll;
     width: 62%;
+    justify-content: flex-end;
+}
+
+.list {
+    flex-grow: 1;
 }
 
 .chat-input__msg textarea {
