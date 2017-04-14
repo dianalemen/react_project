@@ -8,6 +8,8 @@
 
 nav a {
     color: white;
+    text-decoration: none;
+    margin-right: 2%;
 }
 
 #logo {
@@ -17,4 +19,11 @@ nav a {
 h1 {
     margin: 0;
     margin-left: 10px;
+}
+
+.navigation {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }

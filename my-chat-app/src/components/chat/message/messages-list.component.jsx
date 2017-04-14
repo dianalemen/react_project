@@ -1,7 +1,9 @@
+require('../../../styles/messages.css');
 import React from 'react';
 import {Component} from 'react';
 
-import MessageList from './messages-list';
+import MessageList from './message';
+import MessageNew from './message-new.component';
 
 class MessageListComponent extends Component {
 
@@ -20,7 +22,7 @@ class MessageListComponent extends Component {
        if(!this.state.messages) return <p>Loading...</p>;
     return (
 <section className="chat-right-side">
-    <ul className="chat-content ">
+    <ul className="chat-content">
         <li className="chat-content__info">
             <button><span className="icon-envelop "></span></button>
             <form>
@@ -29,24 +31,11 @@ class MessageListComponent extends Component {
             </form>
             <button><span className="icon-user "></span></button>
         </li>
-    </ul>
-    <ul className="chat-content__massege1">
-        <li className="chat-content__massege" >
-            <div className="user-content__image "></div>
-            <div className="chat-content__container ">
-                
-            <ul className="chat-content__text ">
+</ul>
+            <ul className="chat-content">
                 <MessageList items={this.state.messages}/>
             </ul>
-               
-                <div className="chat-content__time ">
-                    <p>Date</p>
-                </div>
-            </div>
-            <button>Get</button>
-            <button>Join</button>
-        </li>
-    </ul>
+    <MessageNew />
 </section>
     );
   }
