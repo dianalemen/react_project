@@ -4,6 +4,11 @@ import { Component } from 'react';
 
 
 class List extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {};
+    }
     
     render() {
         const users = this.props.items;
@@ -28,7 +33,7 @@ class List extends Component {
 
     handleClick(e) {
        e.preventDefault();
-       console.log(this.users.id);    
+       console.log(e.target);    
     }
 }
 

@@ -7,9 +7,10 @@ class MessagesList extends Component {
     
     render() {
         const messages = this.props.items;
+
         return (
             <ul className="chat-content list">
-                {messages.map(message =>
+                {messages.filter(message => message.chatId === 1).map(message =>
                     <li key={message.id} className="chat-content__massege ">
                         <div className="user-content__image "></div>
                          <div className="chat-content__container ">
@@ -28,9 +29,9 @@ class MessagesList extends Component {
                 )
     
          }
-
     
     }
+
 
 
 export default MessagesList;
