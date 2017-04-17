@@ -7,6 +7,8 @@ class MessagesList extends Component {
     
     render() {
         const messages = this.props.items;
+        //const chatId = this.props.chatId;
+        
 
         return (
             <ul className="chat-content list">

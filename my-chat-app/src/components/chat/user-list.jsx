@@ -1,15 +1,14 @@
 require('../../styles/user-list.css');
 import React from 'react';
-import { Component } from 'react';
-
+import {Component} from 'react';
+//import MessagesList from './message/message';
 
 class List extends Component {
 
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {selected : 1};
     }
-    
     render() {
         const users = this.props.items;
         return (
@@ -27,15 +26,23 @@ class List extends Component {
                     </div>
                 </li>)}
             </ul>
-                )
-    
-         }
+            
+            )
+        }
 
-    handleClick(e) {
+ /*getInitialState() {
+    return {
+    	selected: this.props.selected
+    };
+  }*/
+   
+ handleClick(index,e) {
        e.preventDefault();
-       console.log(e.target);    
-    }
+            this.setState({
+    	selected: index
+    });
 }
+    }
 
 
 export default List;
