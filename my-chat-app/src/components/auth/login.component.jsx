@@ -1,15 +1,18 @@
-require('../../styles/style_auth.css');
+import '../../styles/style_auth.css';
 import React from 'react';
 import {Component} from 'react';
-
-
+import io from 'socket.io-client';
 
 class LoginComponent extends Component {
+
         constructor(props){
             super(props);
             this.state = {};
             
         }
+        socket = io.connect('https://eleksfrontendcamp-mockapitron.rhcloud.com:8400');
+
+
         signIn(){
             var myHeaders = new Headers(); myHeaders.set('Content-Type', 'application/json');
             var myInit = {
@@ -21,7 +24,9 @@ class LoginComponent extends Component {
              fetch('http://eleksfrontendcamp-mockapitron.rhcloud.com/login', myInit)
             .then((res) => res.json())
             .then((resObj) => localStorage.setItem('token', resObj.token))
-            .then()
+            .then(this.socket.on('connect', () => {
+                    this.socket.emit('authenticate', { token: localStorage['token'] })
+            }));
         }
 
   render() {
