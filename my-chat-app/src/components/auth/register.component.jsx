@@ -6,6 +6,7 @@ import {Component} from 'react';
 
 
 class RegisterComponent extends Component {
+
   render() {
     return (
         <section className="auth-section">
@@ -39,7 +40,8 @@ class RegisterComponent extends Component {
                     
             </div>
         </div>
-        <button type="submit" className="register-button content-button">Зареєструватися</button>
+        <button type="submit" className="register-button content-button">
+            Зареєструватися</button>
     </form>
     </section>
     );

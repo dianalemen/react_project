@@ -9,7 +9,9 @@ class MessageListComponent extends Component {
 
     constructor(){
         super();
-        this.state = {};
+        this.state = {
+            messages:[]
+        };
     }
 
     componentDidMount(){
