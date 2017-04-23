@@ -17,14 +17,15 @@ class MessageNewComponent extends Component {
         }
 
         send(){
-            socket.emit('message', 'testtest2');
+            socket.emit('message', this.messageInput.value);
+            this.messageInput.value = '';
         }
 
   render() {
     return (
 <div className="chat-input">
     <div className="chat-input__msg ">
-        <textarea placeholder="Введіть повідомлення... "></textarea>
+        <textarea placeholder="Введіть повідомлення... " ref={(textarea) => {this.messageInput = textarea}}></textarea>
         <button type="submit" onClick={this.send.bind(this)}><span>Send</span></button>
     </div>
 </div>
