@@ -14,7 +14,6 @@ class MessagesList extends Component {
 
         componentDidMount(){
             this.props.onGetMessages();
-  
         }
 
     render() {

@@ -7,6 +7,12 @@ export default function messages(state = initialState, action) {
             action.messages.forEach(current => {
                 state.push(current);
             });
+
+        case 'NEW_MESSAGES':
+            [
+                ...state,
+                action.messages
+            ]
         default:
             return state;
     }

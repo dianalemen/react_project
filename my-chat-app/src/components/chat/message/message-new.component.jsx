@@ -2,7 +2,7 @@ require('../../../styles/message-new.css');
 import React from 'react';
 import {Component} from 'react';
 import io from 'socket.io-client';
-import { socketConnect } from 'socket.io-react';
+import {connect} from 'react-redux';
 
 const socket = io.connect('http://eleksfrontendcamp-mockapitron.rhcloud.com:8000');
 
@@ -14,6 +14,12 @@ class MessageNewComponent extends Component {
                 socket.on('connect', () => {
                 socket.emit('authenticate', { token: localStorage['token'] });
             })
+        }
+
+        componentDidMount(){
+                 socket.on('message', msg => {
+                    this.props.onGetMessages(msg);
+                });
         }
 
         send(){
@@ -36,4 +42,13 @@ class MessageNewComponent extends Component {
 MessageNewComponent.defaultProps = {
 };
 
-export default socketConnect(MessageNewComponent);
+export default connect(
+    a => ({
+        messages: a.messages
+    }),
+    dispatch =>({
+        onGetMessages: (msg) =>{
+        dispatch({type: 'NEW_MESSAGES', messages: msg})
+      }
+    })
+)(MessageNewComponent);
