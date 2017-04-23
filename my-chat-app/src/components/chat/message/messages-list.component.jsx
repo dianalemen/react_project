@@ -1,7 +1,6 @@
 require('../../../styles/messages.css');
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {Component} from 'react';
-import {connect} from 'react-redux';
 
 import MessageList from './message';
 import MessageNew from './message-new.component';

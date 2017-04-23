@@ -1,7 +1,7 @@
 require('../../styles/user-list.css');
 import React from 'react';
 import {Component} from 'react';
-//import MessagesList from './message/message';
+
 
 class List extends Component {
 
