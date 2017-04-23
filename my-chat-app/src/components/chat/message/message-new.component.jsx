@@ -18,7 +18,7 @@ class MessageNewComponent extends Component {
 
         componentDidMount(){
                  socket.on('message', msg => {
-                    this.props.onGetMessages(msg);
+                    this.props.onRecieved(msg);
                 });
         }
 
@@ -47,8 +47,8 @@ export default connect(
         messages: a.messages
     }),
     dispatch =>({
-        onGetMessages: (msg) =>{
-        dispatch({type: 'NEW_MESSAGES', messages: msg})
+        onRecieved: (name) =>{
+        dispatch({type: 'NEW_MESSAGE', message: name})
       }
     })
 )(MessageNewComponent);

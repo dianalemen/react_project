@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 
 import {getMessages} from '../../../actions/messages';
 
+
 class MessagesList extends Component {
 
      constructor(props){
             super(props);
-            this.state = {};
         }
 
         componentDidMount(){

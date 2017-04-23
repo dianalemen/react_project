@@ -8,7 +8,7 @@ export default function messages(state = initialState, action) {
                 state.push(current);
             });
 
-        case 'NEW_MESSAGES':
+        case 'NEW_MESSAGE':
             [
                 ...state,
                 action.messages
