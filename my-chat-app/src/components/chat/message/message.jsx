@@ -3,7 +3,12 @@ import React from 'react';
 import { Component } from 'react';
 import io from 'socket.io-client';
 import { socketConnect } from 'socket.io-react';
+import {connect} from 'react-redux';
+
+import {getMessages} from '../../../actions/messages';
+
 const socket = io.connect('http://eleksfrontendcamp-mockapitron.rhcloud.com:8000');
+
 class MessagesList extends Component {
 
      constructor(props){
@@ -15,36 +20,30 @@ class MessagesList extends Component {
      })
         }
 
+        componentDidMount(){
+    this.props.onGetMessages();
+  
+  }
+
 send(){
-   socket.emit('message', 'test');
+   socket.emit('message', 'testtest2');
 
 
 }
 
     render() {
-
-        const messages = this.props.items;
-        //const chatId = this.props.chatId;
-        
-        
-
         return (
             <ul className="chat-content list">
-                {messages.map(message =>
-                    <li key={message.id} className="chat-content__massege ">
-                        <div className="user-content__image "></div>
-                         <div className="chat-content__container ">
-                            <div className="chat-content__text ">
-                                <p>{message.text}
-                                </p>
-                             </div>
-                            <div className="chat-content__time ">
-                                <p>14:00</p>
-                            </div>
-                        <button onClick={this.send.bind(this)}>Get</button>
-                        <button>Join</button>
+                {this.props.messages.slice(this.props.messages.length-6, this.props.messages.length-1).map((message, index) =>
+            <li key={index} className="chat-content__massege">
+                <div className="chat-content__text ">
+                    {message.msg}
+                </div>
+                <div className="chat-content__time ">
+                    <p>{new Date(message.time).getHours()}</p>
                     </div>
-                </li>)}
+                </li>
+      )}
             </ul>
                 )
     
@@ -53,5 +52,14 @@ send(){
     }
 
 
-
-export default socketConnect(MessagesList);
+//export default socketConnect(MessagesList);
+export default connect(
+    state => ({
+     messages: state.messages
+    }),
+    dispatch => ({
+     onGetMessages: () => {
+        dispatch(getMessages());
+      }
+    })
+)(MessagesList);

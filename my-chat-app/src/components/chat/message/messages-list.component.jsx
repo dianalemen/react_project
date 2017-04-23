@@ -1,33 +1,19 @@
 require('../../../styles/messages.css');
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Component} from 'react';
+import {connect} from 'react-redux';
 
 import MessageList from './message';
 import MessageNew from './message-new.component';
 
 class MessageListComponent extends Component {
 
-    constructor(){
-        super();
-        this.state = {
-            messages:[]
-        };
+    constructor(props){
+        super(props);
     }
 
-    componentDidMount(){
-        this.setState({
-                messages: [{id: 4, text: 'hello1 chatId1', chatId: 1},
-                           {id: 5, text: 'hello2 chatId1', chatId: 1},
-                           {id: 6, text: 'hello3 chatId1', chatId: 1},
-                           {id: 7, text: 'hello3 chatId2', chatId: 2},
-                           {id: 8, text: 'hello3 chatId2', chatId: 2},
-                           {id: 9, text: 'hello3 chatId2', chatId: 2}
-                           ]
-            })
-        }
-
   render() {
-       if(!this.state.messages) return <p>Loading...</p>;
+     
     return (
 <section className="chat-right-side">
     <ul className="chat-content">
@@ -40,16 +26,12 @@ class MessageListComponent extends Component {
             <button><span className="icon-user "></span></button>
         </li>
 </ul>
-            
-                <MessageList items={this.state.messages}/>
-         
-    <MessageNew />
+        <MessageList/>
+        <MessageNew />
 </section>
     );
   }
 }
 
-MessageListComponent.defaultProps = {
-};
-
 export default MessageListComponent;
+

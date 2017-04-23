@@ -68,9 +68,12 @@
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "react-redux": "^5.0.4",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "react-routing": "0.0.7",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "socket.io-react": "^1.1.2"
   }
 }
