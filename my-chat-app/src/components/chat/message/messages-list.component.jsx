@@ -1,4 +1,4 @@
-require('../../../styles/messages.css');
+import '../../../styles/messages.css';
 import React from 'react';
 import {Component} from 'react';
 

@@ -1,4 +1,4 @@
-require('../../styles/chat-room.css');
+import '../../styles/chat-room.css';
 import React from 'react';
 import {Component} from 'react';
 

@@ -1,4 +1,4 @@
-require('../../styles/user-list.css');
+import '../../styles/user-list.css';
 import React from 'react';
 import {Component} from 'react';
 

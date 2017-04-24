@@ -1,4 +1,4 @@
-require('../../styles/style_auth.css');
+import '../../styles/style_auth.css';
 import React from 'react';
 import {Component} from 'react';
 

@@ -1,4 +1,4 @@
-require('../../../styles/message-new.css');
+import '../../../styles/message-new.css';
 import React from 'react';
 import {Component} from 'react';
 import io from 'socket.io-client';
