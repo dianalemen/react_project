@@ -4,7 +4,7 @@ import {Component} from 'react';
 import io from 'socket.io-client';
 import {connect} from 'react-redux';
 
-const socket = io.connect('http://eleksfrontendcamp-mockapitron.rhcloud.com:8000');
+export const socket = io.connect('http://eleksfrontendcamp-mockapitron.rhcloud.com:8000');
 
 class MessageNewComponent extends Component {
 
@@ -13,13 +13,15 @@ class MessageNewComponent extends Component {
             this.state = {};
                 socket.on('connect', () => {
                 socket.emit('authenticate', { token: localStorage['token'] });
-            })
+                })
+            socket.on('message', msg => {
+                    this.props.onRecieved(msg);
+                   // console.log(msg);
+                });
         }
 
         componentDidMount(){
-                 socket.on('message', msg => {
-                    this.props.onRecieved(msg);
-                });
+                 
         }
 
         send(){
