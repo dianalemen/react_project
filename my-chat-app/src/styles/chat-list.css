@@ -12,6 +12,22 @@ body {
     overflow-y: scroll;
 }
 
+.close {
+    width: 150px;
+}
+
+.close .left-nav__serch {
+    display: none;
+}
+
+.close .user-content__status {
+    display: none;
+}
+
+.close .user-content__time {
+    display: none;
+}
+
 .chat-users-panel {
     padding-left: 0;
     list-style: none;

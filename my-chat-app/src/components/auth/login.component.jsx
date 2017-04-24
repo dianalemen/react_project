@@ -7,24 +7,41 @@ class LoginComponent extends Component {
 
         constructor(props){
             super(props);
-            this.state = {};
+            this.state = {
+                credentials:{
+                    username: '',
+                    password: ''
+                }
+            };
             
         }
        // socket = io.connect('https://eleksfrontendcamp-mockapitron.rhcloud.com:8000');
 
 
-        signIn(){
+        signIn(e){
+            e.preventDefault();
             var myHeaders = new Headers();
             myHeaders.set('Content-Type', 'application/json');
             var myInit = {
                     method: 'post',
                     headers: myHeaders,
                     mode: 'cors',
-                    body: JSON.stringify({username: 'Diana2', password: 'admin'})};
+                    body: JSON.stringify(this.state.credentials)};
 
              fetch('http://eleksfrontendcamp-mockapitron.rhcloud.com/login', myInit)
             .then((res) => res.json())
-            .then((resObj) => localStorage.setItem('token', resObj.token))
+            .then((resObj) => {  console.log(resObj)
+                return localStorage.setItem('token', resObj.token)
+            })
+            .catch(err => console.log(err))
+        }
+
+        changeInput(field){
+            return event => {
+            const credentials = this.state.credentials;
+            credentials[field] = event.target.value;
+            this.setState({credentials: credentials})
+            }
         }
 
   render() {
@@ -32,10 +49,10 @@ class LoginComponent extends Component {
    <section className="auth-section">
     <div className="content">
         <div >
-            <input type="email" placeholder="Ваш email" name="email" className="content-input"/>
+            <input type="email" placeholder="Ваш email" name="email" className="content-input" onChange={this.changeInput('username').bind(this)}/>
         </div>
         <div >
-            <input type="password" placeholder="Ваш пароль" name="password" className="content-input"/>
+            <input type="password" placeholder="Ваш пароль" name="password" className="content-input" onChange={this.changeInput('password').bind(this)}/>
         </div>
         <div>
             <button className="content-button" onClick={this.signIn.bind(this)}>Увійти</button>

@@ -14,10 +14,7 @@ class MessageNewComponent extends Component {
                 socket.on('connect', () => {
                 socket.emit('authenticate', { token: localStorage['token'] });
                 })
-            socket.on('message', msg => {
-                    this.props.onRecieved(msg);
-                   // console.log(msg);
-                });
+
         }
 
         componentDidMount(){

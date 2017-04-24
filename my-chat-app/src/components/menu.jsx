@@ -13,7 +13,7 @@ class MenuComponent extends Component {
          <nav className="navigation">
            <Link to="/home" id="logo"><h1>MyChatApp</h1></Link>
            <Link to="/home">Home</Link>
-           <Link to="/register">Regeister</Link>
+           <Link to="/register">Register</Link>
            <Link to="/login">Login</Link>
            <Link to="/chat">Chat</Link>
          </nav>

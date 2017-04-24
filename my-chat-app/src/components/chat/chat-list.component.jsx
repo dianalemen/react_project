@@ -8,7 +8,17 @@ class ChatListComponent extends Component {
 
      constructor(){
         super();
-        this.state = {};
+        this.state = {
+            isClose: false,
+            class:''
+        };
+    }
+    isClose(){
+         if(this.state.isClose){
+             return this.setState({isClose: false, class:''})
+         } else {
+             return this.setState({isClose: true, class: 'close'})
+         }
     }
 
     componentDidMount(){
@@ -20,13 +30,14 @@ class ChatListComponent extends Component {
         }
 
   render() {
+        let classes = `chat-left-side ${this.state.class}`;
         if(!this.state.users) return <p>Loading...</p>;
     return (
-    <div className="chat-left-side">
+    <div className={classes}>
             <ul className="chat-users-panel">
                 <li className="left-nav">
-                    <div className="left-nav__button">
-                        <input type="checkbox" className="left-nav__input" />
+                    <div className="left-nav__button" onClick={this.isClose.bind(this)}>
+                        <input type="checkbox" className="left-nav__input"/>
                     </div>
                     <div className="left-nav__serch">
                         <form>

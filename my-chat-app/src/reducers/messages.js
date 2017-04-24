@@ -7,11 +7,11 @@ export default function messages(state = initialState, action) {
             action.messages.forEach(current => {
                 state.push(current);
             });
-            console.log(state);
+            //console.log(state);
             return state;
         case 'NEW_MESSAGE':
-            state.push(action.message);
-            return state;
+            //state.push(action.message);
+            return [...state, action.message];
         default:
             return state;
     }

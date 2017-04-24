@@ -11,6 +11,7 @@ class MessageListComponent extends Component {
         super(props);
     }
 
+
   render() {
      
     return (
@@ -22,7 +23,7 @@ class MessageListComponent extends Component {
                 <input type="search" name="search" id="serchInput"/>
                 <input type="button"/>
             </form>
-            <button><span className="icon-user "></span></button>
+            <button><span className="icon-user"></span></button>
         </li>
 </ul>
         <MessageList/>
