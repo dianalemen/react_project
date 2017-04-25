@@ -28,13 +28,19 @@ class MessagesList extends Component {
                 .filter(message => message.msg.includes(filterText))
                 .map((message, index) =>
             <li key={index} className="chat-content__massege">
-                <div className="chat-content__text ">
-                    {message.msg}
-                </div>
-                <div className="chat-content__time ">
-                    <p>{new Date(message.time).getHours()}</p>
+                <div className="user-content__image">
                     </div>
-                    <div><p>{message.user.username}</p></div>
+                     <div className="chat-content__container ">
+                         <div className="chat-content__username">
+                                <p>{message.user.username}</p>
+                         </div>
+                            <div className="chat-content__text ">
+                                 {message.msg}
+                             </div>
+                         <div className="chat-content__time ">
+                            <p>{new Date(message.time).getHours()}</p>
+                         </div>
+                    </div>
                 </li>
                     )}
             </ul>
