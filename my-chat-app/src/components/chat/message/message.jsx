@@ -10,6 +10,7 @@ class MessagesList extends Component {
 
      constructor(props){
             super(props);
+            this.state ={};
            socket.on('message', msg => {
                     this.props.onRecieved(msg);
                 });
@@ -20,9 +21,12 @@ class MessagesList extends Component {
         }
     
     render() {
+        const filterText = this.props.filterText;
         return (
             <ul className="chat-content list">
-                {this.props.messages.slice(0, 4).map((message, index) =>
+                {this.props.messages.slice(0, 4)
+                .filter(message => message.msg.includes(filterText))
+                .map((message, index) =>
             <li key={index} className="chat-content__massege">
                 <div className="chat-content__text ">
                     {message.msg}
