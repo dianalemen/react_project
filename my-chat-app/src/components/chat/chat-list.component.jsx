@@ -10,7 +10,8 @@ class ChatListComponent extends Component {
         super();
         this.state = {
             isClose: false,
-            class:''
+            class:'',
+            filterText: ''
         };
     }
     isClose(){
@@ -29,6 +30,12 @@ class ChatListComponent extends Component {
             })
         }
 
+        handleFilterTextInput(e) {
+                    this.setState({
+                    filterText: e.target.value.toLowerCase()
+            });
+        }
+
   render() {
         let classes = `chat-left-side ${this.state.class}`;
         if(!this.state.users) return <p>Loading...</p>;
@@ -41,7 +48,8 @@ class ChatListComponent extends Component {
                     </div>
                     <div className="left-nav__serch">
                         <form>
-                            <input type="search" className="left-nav__type-search"/>
+                            <input type="search" className="left-nav__type-search"
+                                    onChange={this.handleFilterTextInput.bind(this)}/>
                             <input type="button" className="left-nav__button"/>
                         </form>
                     </div>
@@ -55,7 +63,8 @@ class ChatListComponent extends Component {
                 </li>
                 </ul>
             <ul>
-                <List items={this.state.users}/>
+                <List items={this.state.users}
+                      filterText={this.state.filterText}/>
             </ul>
     </div>
     );
