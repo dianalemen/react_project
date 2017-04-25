@@ -14,9 +14,10 @@ class List extends Component {
         const users = this.props.items;
         const filterText = this.props.filterText;
         console.log(filterText);
+
         return (
             <ul>
-               {users.map((user) => 
+              {users.filter(user => user.login.includes(filterText)).map((user) => 
             <li key={user.id} className="user-content" onClick={this.handleClick.bind(this)}>
                         <div className=" user-content__image ">
                     </div>
@@ -33,12 +34,6 @@ class List extends Component {
             
             )
         }
-
- /*getInitialState() {
-    return {
-    	selected: this.props.selected
-    };
-  }*/
    
  handleClick(index,e) {
        e.preventDefault();
