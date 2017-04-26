@@ -28,11 +28,12 @@ ul {
     outline: none;
     padding: 5px 17px;
     resize: none;
-    width: 70%;
+    width: 95%;
 }
 
 .chat-input__msg {
     padding-left: 10%;
+    width: 77%;
 }
 
 .chat-input__msg button {

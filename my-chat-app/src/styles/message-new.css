@@ -1,4 +1,9 @@
 .chat-input {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.fa-paper-plane {
+    color: #eef4f5;
+    font-size: 27px;
 }

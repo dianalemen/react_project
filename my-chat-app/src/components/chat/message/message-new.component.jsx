@@ -30,9 +30,9 @@ class MessageNewComponent extends Component {
     return (
 <div className="chat-input">
     <div className="chat-input__msg ">
-        <textarea placeholder="Введіть повідомлення... " ref={(textarea) => {this.messageInput = textarea}}></textarea>
-        <button type="submit" onClick={this.send.bind(this)}><span>Send</span></button>
-    </div>
+        <textarea placeholder="Введіть повідомлення... " ref={(textarea) => {this.messageInput = textarea}}></textarea></div>
+        <button type="submit" onClick={this.send.bind(this)}><i className="fa fa-paper-plane" aria-hidden="true"/></button>
+    
 </div>
     );
   }
