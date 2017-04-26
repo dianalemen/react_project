@@ -13,7 +13,6 @@ class List extends Component {
     render() {
         const users = this.props.items;
         const filterText = this.props.filterText;
-        console.log(filterText);
 
         return (
             <ul>

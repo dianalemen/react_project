@@ -1,7 +1,7 @@
 require('../../styles/nav.css');
 import React from 'react';
 import {Component} from 'react';
-
+import Home from '../home/home.component'
 
 import MenuComponent from '../menu.jsx';
 
