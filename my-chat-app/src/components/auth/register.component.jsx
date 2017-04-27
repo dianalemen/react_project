@@ -1,9 +1,7 @@
 import '../../styles/style_auth.css';
 import React from 'react';
 import {Component} from 'react';
-
-
-
+import { Redirect } from 'react-router-dom';
 
 class RegisterComponent extends Component {
      constructor(props){
@@ -27,6 +25,7 @@ class RegisterComponent extends Component {
                     body: JSON.stringify(this.state.credentials)};
 
              fetch('http://eleksfrontendcamp-mockapitron.rhcloud.com/signup', myInit)
+            .then(this.setState({redirect: true}))
             .then(console.log)
         }
 
@@ -39,6 +38,7 @@ class RegisterComponent extends Component {
         }
 
   render() {
+      if (this.state.redirect)  return( <Redirect to='/login' />);
     return (
         <section className="auth-section">
     <form className="content">
