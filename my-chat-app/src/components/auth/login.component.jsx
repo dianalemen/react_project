@@ -1,6 +1,7 @@
 import '../../styles/style_auth.css';
 import React from 'react';
 import {Component} from 'react';
+import { Redirect } from 'react-router-dom';
 //import io from 'socket.io-client';
 
 class LoginComponent extends Component {
@@ -33,6 +34,7 @@ class LoginComponent extends Component {
             .then((resObj) => {  console.log(resObj)
                 return localStorage.setItem('token', resObj.token)
             })
+            .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         }
 
@@ -45,6 +47,7 @@ class LoginComponent extends Component {
         }
 
   render() {
+      if (this.state.redirect)  return( <Redirect to='/chat' />);
     return (
    <section className="auth-section">
     <div className="content">

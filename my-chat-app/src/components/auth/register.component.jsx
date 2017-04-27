@@ -19,7 +19,7 @@ class RegisterComponent extends Component {
 
         loginIn(){
             var myHeaders = new Headers();
-             myHeaders.set('Content-Type', 'application/json');
+            myHeaders.set('Content-Type', 'application/json');
             var myInit = {
                     method: 'post',
                     headers: myHeaders,
