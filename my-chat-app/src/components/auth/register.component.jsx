@@ -9,7 +9,8 @@ class RegisterComponent extends Component {
             this.state = {
                 credentials:{
                     username: '',
-                    password: ''
+                    password: '',
+                    email:''
                 }
             }
             
@@ -26,7 +27,7 @@ class RegisterComponent extends Component {
 
              fetch('http://eleksfrontendcamp-mockapitron.rhcloud.com/signup', myInit)
             .then(this.setState({redirect: true}))
-            .then(console.log)
+            .catch(err => console.log(err))
         }
 
         changeInput(field){
@@ -46,7 +47,7 @@ class RegisterComponent extends Component {
             <input type="text" placeholder="Введіть Ваше ім'я" className="content-input" onChange={this.changeInput('username').bind(this)}/>
         </div>
         <div>
-            <input type="email" placeholder="Введіть email" className="content-input"/>
+            <input type="email" placeholder="Введіть email" className="content-input" onChange={this.changeInput('email').bind(this)}/>
         </div>
         
             <div>
