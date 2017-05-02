@@ -23,16 +23,7 @@ class MessageListComponent extends Component {
      
     return (
 <section className="chat-right-side">
-    <ul className="chat-content">
-        <li className="chat-content__info">
-            <button><span className="icon-envelop "></span></button>
-            <form>
-                <input type="search" name="search" id="serchInput" onChange={this.handleFilterTextInput.bind(this)}/>
-                <input type="button"/>
-            </form>
-            <button><span className="icon-user"></span></button>
-        </li>
-</ul>
+    
         <MessageList filterText={this.state.filterText}/>
         <MessageNew />
 </section>

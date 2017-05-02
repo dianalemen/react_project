@@ -31,7 +31,7 @@ class MessageNewComponent extends Component {
 <div className="chat-input">
     <div className="chat-input__msg ">
         <textarea placeholder="Введіть повідомлення... " ref={(textarea) => {this.messageInput = textarea}}></textarea></div>
-        <button type="submit" onClick={this.send.bind(this)}><i className="fa fa-paper-plane" aria-hidden="true"/></button>
+        <button type="submit" onClick={this.send.bind(this)}><i className="fa fa-paper-plane fa-3x"/></button>
     
 </div>
     );

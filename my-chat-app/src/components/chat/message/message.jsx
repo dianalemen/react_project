@@ -19,13 +19,23 @@ class MessagesList extends Component {
         componentDidMount(){
             this.props.onGetMessages();
         }
+        componentDidUpdate(){
+            this.scrollTop();
+        }
+        scrollTop(){
+            let ele = document.getElementsByClassName('chat-content');
+            let eleArray = Array.prototype.slice.call(ele);
+                eleArray.map( val => {
+                val.scrollTop = val.scrollHeight;
+        });}
+   
     
     render() {
         const filterText = this.props.filterText;
         return (
             <ul className="chat-content list">
-                {this.props.messages.slice(0, 4)
-                .filter(message => message.msg.includes(filterText))
+                {this.props.messages.filter(message => typeof(message.msg) !== 'object')
+                //.filter(message => message.msg.includes(filterText))
                 .map((message, index) =>
             <li key={index} className="chat-content__massege">
                 <div className="user-content__image">
