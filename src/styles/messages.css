@@ -10,7 +10,7 @@ ul {
     display: flex;
     flex-direction: column;
     height: 650px;
-    width: 62%;
+    width: 100%;
     justify-content: flex-end;
 }
 

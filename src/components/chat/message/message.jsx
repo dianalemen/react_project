@@ -31,7 +31,7 @@ class MessagesList extends Component {
    
     
     render() {
-        const filterText = this.props.filterText;
+        
         return (
             <ul className="chat-content list">
                 {this.props.messages.filter(message => typeof(message.msg) !== 'object')

@@ -53,13 +53,7 @@ class ChatListComponent extends Component {
                             <input type="button" className="left-nav__button"/>
                         </form>
                     </div>
-                    <div className="left-nav__menu">
-                        <button>
-                        <div className="burger"></div>
-                        <div className="burger"></div>
-                        <div className="burger"></div>
-                    </button>
-                    </div>
+                    
                 </li>
                 </ul>
             <ul>

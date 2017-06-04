@@ -31,7 +31,7 @@ class LoginComponent extends Component {
 
              fetch('http://eleksfrontendcamp-mockapitron.rhcloud.com/login', myInit)
             .then((res) => res.json())
-            .then((resObj) => {  console.log(resObj)
+            .then((resObj) => {
                 return localStorage.setItem('token', resObj.token)
             })
             .then(this.setState({redirect: true}))

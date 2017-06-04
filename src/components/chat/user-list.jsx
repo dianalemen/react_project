@@ -16,7 +16,7 @@ class List extends Component {
 
         return (
             <ul>
-              {users.filter(user => user.login.includes(filterText)).map((user) => 
+              {users.filter(user => user.login.includes(filterText)).map((user) =>
             <li key={user.id} className="user-content" onClick={this.handleClick.bind(this)}>
                         <div className=" user-content__image ">
                     </div>
