@@ -9,7 +9,7 @@ ul {
 .chat-right-side {
     display: flex;
     flex-direction: column;
-    height: 650px;
+    height: 549px;
     width: 100%;
     justify-content: flex-end;
 }

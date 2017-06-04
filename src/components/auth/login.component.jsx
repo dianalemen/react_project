@@ -60,12 +60,7 @@ class LoginComponent extends Component {
         <div>
             <button className="content-button" onClick={this.signIn.bind(this)}>Увійти</button>
         </div>
-        <div className="social">
-            <p>Залогуватися через соціальні мережі</p>
-            <button id="google-login-btn" className="content-button">
-                Login with Google+
-            </button>
-        </div>
+        
     </div>
 
     <div> <br /></div>
