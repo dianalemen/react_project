@@ -1,0 +1,34 @@
+ul {
+    padding-left: 0;
+}
+
+.user-content:hover {
+    background-color: #bd73f7;
+}
+
+.user-content__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(../images/stores/photo.png);
+    background-position-x: -10px;
+}
+
+.user-content__status {
+    width: 58%;
+}
+
+.user-content__status p {
+    text-align: left;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+.user-content__time p {
+    width: 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #744d92;
+    color: #fff;
+}

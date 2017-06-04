@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+}
+
+.chat-left-side {
+    height: 650px;
+    width: 38%;
+    float: left;
+    background-color: #ac45fd;
+    border-top: 1px solid white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.close {
+    width: 150px;
+}
+
+.close .left-nav__serch {
+    display: none;
+}
+
+.close .user-content__status {
+    display: none;
+}
+
+.close .user-content__time {
+    display: none;
+}
+
+.chat-users-panel {
+    padding-left: 0;
+    list-style: none;
+}
+
+.chat-users-panel:nth-child(3) {
+    border-top: solid 10px #fff;
+}
+
+.user-content,
+.left-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.left-nav__button {
+    cursor: pointer;
+    height: 29px;
+    padding-left: 0;
+    position: relative;
+    width: 80px;
+}
+
+.left-nav__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-bottom: 1px solid #eef4f5;
+    border-left: 1px solid #eef4f5;
+    height: 20px;
+    left: 26px;
+    position: absolute;
+    top: 5px;
+    transform: rotate(45deg);
+    width: 20px;
+    outline: none;
+}
+
+.left-nav__input:checked,
+.left-nav__input:focus {
+    outline: none;
+}
+
+.left-nav__input:checked .user-content {
+    visibility: hidden;
+}
+
+.left-nav__menu {
+    height: 35px;
+    width: 12%;
+}
+
+.left-nav__menu button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    outline: none;
+    width: 100%;
+}
+
+.left-nav__menu .burger {
+    background-color: #fff;
+    border-radius: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    width: 30px;
+}
+
+input[type="search"] {
+    background-color: #eef4f5;
+    border: none;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    float: left;
+    height: 31px;
+    outline: none;
+    padding: 5px;
+}
+
+.left-nav__serch {
+    min-width: 208px;
+}
+
+input[type="button"] {
+    background-color: #eef4f5;
+    background-position: -1px 2px;
+    background-image: url(../images/stores/search.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    float: left;
+    height: 31px;
+    outline: none;
+    padding: 5px;
+    width: 28px;
+}

@@ -1,0 +1,29 @@
+.nav-class {
+    background-color: #ac45fd;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2%;
+}
+
+#logo {
+    flex-grow: 2;
+}
+
+h1 {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.navigation {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
